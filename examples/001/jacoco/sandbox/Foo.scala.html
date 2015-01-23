@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Foo.scala</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=2;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jacoco Coverage Report</a> &gt; <a href="index.source.html" class="el_package">sandbox</a> &gt; <span class="el_source">Foo.scala</span></div><h1>Foo.scala</h1><pre class="source lang-java linenums">package sandbox
+
+sealed trait Foo
+<span class="pc" id="L4">case class Bar(s: String) extends Foo</span>
+<span class="fc" id="L5">case object Baz extends Foo</span>
+
+object Foo {
+<span class="pc bpc" id="L8" title="4 of 6 branches missed.">  implicit val fooOrdering: Ordering[Foo] = Ordering.fromLessThan {</span>
+<span class="pc bpc" id="L9" title="2 of 4 branches missed.">    case (Bar(_), Baz) =&gt; true</span>
+<span class="pc bpc" id="L10" title="2 of 4 branches missed.">    case (Bar(a), Bar(b)) =&gt; a &lt; b</span>
+<span class="nc" id="L11">    case (_, _) =&gt; false</span>
+  }
+<span class="fc" id="L13">}</span>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>

@@ -1,0 +1,207 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          sandbox/Foo.scala.html
+        </title>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.18.3/addons/pager/jquery.tablesorter.pager.min.js"></script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package sandbox
+</span>2 <span style=''>
+</span>3 <span style=''>sealed trait Foo
+</span>4 <span style=''>case class Bar(s: String) extends Foo
+</span>5 <span style=''>case object Baz extends Foo
+</span>6 <span style=''>
+</span>7 <span style=''>object Foo {
+</span>8 <span style=''>  implicit val fooOrdering: Ordering[Foo] = </span><span style='background: #AEF1AE'>Ordering.fromLessThan {
+</span>9 <span style=''></span><span style='background: #AEF1AE'>    case (Bar(_), Baz) => true
+</span>10 <span style=''></span><span style='background: #AEF1AE'>    case (Bar(a), Bar(b)) => a < b
+</span>11 <span style=''></span><span style='background: #AEF1AE'>    case (_, _) => false
+</span>12 <span style=''></span><span style='background: #AEF1AE'>  }</span><span style=''>
+</span>13 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line Number</th>
+        <th>Statement Id</th>
+        <th>Tree Type</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr>
+      <tr>
+        <td>
+          8
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          Match
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Tuple2.apply[sandbox.Foo, sandbox.Foo](x0$1, x1$1) match {
+  case (_1: sandbox.Foo, _2: sandbox.Foo)(sandbox.Foo, sandbox.Foo)((s: String)sandbox.Bar(_), Baz) =&gt; true
+  case (_1: sandbox.Foo, _2: sandbox.Foo)(sandbox.Foo, sandbox.Foo)((s: String)sandbox.Bar((a @ _)), (s: String)sandbox.Bar((b @ _))) =&gt; scala.this.Predef.augmentString(a).&lt;(b)
+  case (_1: sandbox.Foo, _2: sandbox.Foo)(sandbox.Foo, sandbox.Foo)(_, _) =&gt; false
+}
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Tuple2.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Tuple2.apply[sandbox.Foo, sandbox.Foo](x0$1, x1$1)
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.math.Ordering.fromLessThan
+        </td>
+        <td style="background: #AEF1AE">
+          scala.`package`.Ordering.fromLessThan[sandbox.Foo](((x0$1: sandbox.Foo, x1$1: sandbox.Foo) =&gt; scala.Tuple2.apply[sandbox.Foo, sandbox.Foo](x0$1, x1$1) match {
+  case (_1: sandbox.Foo, _2: sandbox.Foo)(sandbox.Foo, sandbox.Foo)((s: String)sandbox.Bar(_), Baz) =&gt; true
+  case (_1: sandbox.Foo, _2: sandbox.Foo)(sandbox.Foo, sandbox.Foo)((s: String)sandbox.Bar((a @ _)), (s: String)sandbox.Bar((b @ _))) =&gt; scala.this.Predef.augmentString(a).&lt;(b)
+  case (_1: sandbox.Foo, _2: sandbox.Foo)(sandbox.Foo, sandbox.Foo)(_, _) =&gt; false
+}))
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          true
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          case (_1: sandbox.Foo, _2: sandbox.Foo)(sandbox.Foo, sandbox.Foo)((s: String)sandbox.Bar(_), Baz) =&gt; true
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          case (_1: sandbox.Foo, _2: sandbox.Foo)(sandbox.Foo, sandbox.Foo)((s: String)sandbox.Bar((a @ _)), (s: String)sandbox.Bar((b @ _))) =&gt; scala.this.Predef.augmentString(a).&lt;(b)
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.math.Ordered.&lt;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.this.Predef.augmentString(a).&lt;(b)
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          case (_1: sandbox.Foo, _2: sandbox.Foo)(sandbox.Foo, sandbox.Foo)(_, _) =&gt; false
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          false
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>
