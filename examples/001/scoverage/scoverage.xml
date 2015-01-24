@@ -1,31 +1,16 @@
 <scoverage 
-statement-count="9" statements-invoked="5" statement-rate="55.56" branch-rate="100.00" version="1.0" timestamp="1421992472732">
+statement-count="4" statements-invoked="2" statement-rate="50.00" branch-rate="100.00" version="1.0" timestamp="1422064884211">
     <packages>
-        <package name="sandbox" statement-count="9" statements-invoked="5" statement-rate="55.56">
+        <package name="sandbox" statement-count="4" statements-invoked="2" statement-rate="50.00">
             <classes>
                 <class 
-                name="Foo" filename="/sandbox/Foo.scala" statement-count="9" statements-invoked="5" statement-rate="55.56" branch-rate="100.00">
+                name="Foo" filename="/sandbox/Foo.scala" statement-count="4" statements-invoked="2" statement-rate="50.00" branch-rate="100.00">
                     <methods>
                         <method 
-                        name="sandbox/Foo/&lt;none&gt;" statement-count="9" statements-invoked="5" statement-rate="55.56" branch-rate="100.00">
+                        name="sandbox/Foo/&lt;none&gt;" statement-count="4" statements-invoked="2" statement-rate="50.00" branch-rate="100.00">
                             <statements>
                                 <statement 
-                                package="sandbox" class="Foo" class-type="Object" top-level-class="Foo" source="/home/travis/code/projects/coverage-sandbox/ex001/src/main/scala/sandbox/Foo.scala" method="&lt;none&gt;" start="180" end="276" line="8" branch="false" invocation-count="1">
-</statement>
-                                <statement 
-                                package="sandbox" class="Foo" class-type="Object" top-level-class="Foo" source="/home/travis/code/projects/coverage-sandbox/ex001/src/main/scala/sandbox/Foo.scala" method="&lt;none&gt;" start="208" end="212" line="9" branch="false" invocation-count="0">
-</statement>
-                                <statement 
                                 package="sandbox" class="Foo" class-type="Object" top-level-class="Foo" source="/home/travis/code/projects/coverage-sandbox/ex001/src/main/scala/sandbox/Foo.scala" method="&lt;none&gt;" start="242" end="247" line="10" branch="false" invocation-count="1">
-</statement>
-                                <statement 
-                                package="sandbox" class="Foo" class-type="Object" top-level-class="Foo" source="/home/travis/code/projects/coverage-sandbox/ex001/src/main/scala/sandbox/Foo.scala" method="&lt;none&gt;" start="242" end="247" line="10" branch="false" invocation-count="1">
-</statement>
-                                <statement 
-                                package="sandbox" class="Foo" class-type="Object" top-level-class="Foo" source="/home/travis/code/projects/coverage-sandbox/ex001/src/main/scala/sandbox/Foo.scala" method="&lt;none&gt;" start="267" end="272" line="11" branch="false" invocation-count="0">
-</statement>
-                                <statement 
-                                package="sandbox" class="Foo" class-type="Object" top-level-class="Foo" source="/home/travis/code/projects/coverage-sandbox/ex001/src/main/scala/sandbox/Foo.scala" method="&lt;none&gt;" start="180" end="180" line="8" branch="false" invocation-count="1">
 </statement>
                                 <statement 
                                 package="sandbox" class="Foo" class-type="Object" top-level-class="Foo" source="/home/travis/code/projects/coverage-sandbox/ex001/src/main/scala/sandbox/Foo.scala" method="&lt;none&gt;" start="158" end="276" line="8" branch="false" invocation-count="1">

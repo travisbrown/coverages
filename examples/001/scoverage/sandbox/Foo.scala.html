@@ -31,9 +31,9 @@
 </span>6 <span style=''>
 </span>7 <span style=''>object Foo {
 </span>8 <span style=''>  implicit val fooOrdering: Ordering[Foo] = </span><span style='background: #AEF1AE'>Ordering.fromLessThan {
-</span>9 <span style=''></span><span style='background: #AEF1AE'>    case (Bar(_), Baz) => true
+</span>9 <span style=''></span><span style='background: #AEF1AE'>    case (Bar(_), Baz) => </span><span style='background: #F0ADAD'>true</span><span style='background: #AEF1AE'>
 </span>10 <span style=''></span><span style='background: #AEF1AE'>    case (Bar(a), Bar(b)) => a < b
-</span>11 <span style=''></span><span style='background: #AEF1AE'>    case (_, _) => false
+</span>11 <span style=''></span><span style='background: #AEF1AE'>    case (_, _) => </span><span style='background: #F0ADAD'>false</span><span style='background: #AEF1AE'>
 </span>12 <span style=''></span><span style='background: #AEF1AE'>  }</span><span style=''>
 </span>13 <span style=''>}
 </span></pre>
@@ -41,54 +41,23 @@
           <div class="tab-pane" id="statementlist">
             <table cellspacing="0" cellpadding="0" class="table statementlist">
       <tr>
-        <th>Line Number</th>
-        <th>Statement Id</th>
-        <th>Tree Type</th>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
         <th>Symbol</th>
         <th>Code</th>
-      </tr>
-      <tr>
-        <td>
-          8
-        </td>
-        <td>
-          8
-        </td>
-        <td>
-          Match
-        </td>
-        <td>
-          &lt;nosymbol&gt;
-        </td>
-        <td style="background: #AEF1AE">
-          scala.Tuple2.apply[sandbox.Foo, sandbox.Foo](x0$1, x1$1) match {
-  case (_1: sandbox.Foo, _2: sandbox.Foo)(sandbox.Foo, sandbox.Foo)((s: String)sandbox.Bar(_), Baz) =&gt; true
-  case (_1: sandbox.Foo, _2: sandbox.Foo)(sandbox.Foo, sandbox.Foo)((s: String)sandbox.Bar((a @ _)), (s: String)sandbox.Bar((b @ _))) =&gt; scala.this.Predef.augmentString(a).&lt;(b)
-  case (_1: sandbox.Foo, _2: sandbox.Foo)(sandbox.Foo, sandbox.Foo)(_, _) =&gt; false
-}
-        </td>
       </tr><tr>
         <td>
           8
         </td>
         <td>
-          1
+          4
         </td>
         <td>
-          Apply
-        </td>
-        <td>
-          scala.Tuple2.apply
-        </td>
-        <td style="background: #AEF1AE">
-          scala.Tuple2.apply[sandbox.Foo, sandbox.Foo](x0$1, x1$1)
-        </td>
-      </tr><tr>
-        <td>
-          8
-        </td>
-        <td>
-          9
+          158
+          -
+          276
         </td>
         <td>
           Apply
@@ -108,7 +77,12 @@
           9
         </td>
         <td>
-          2
+          1
+        </td>
+        <td>
+          208
+          -
+          212
         </td>
         <td>
           Literal
@@ -121,42 +95,15 @@
         </td>
       </tr><tr>
         <td>
-          9
-        </td>
-        <td>
-          3
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;nosymbol&gt;
-        </td>
-        <td style="background: #F0ADAD">
-          case (_1: sandbox.Foo, _2: sandbox.Foo)(sandbox.Foo, sandbox.Foo)((s: String)sandbox.Bar(_), Baz) =&gt; true
-        </td>
-      </tr><tr>
-        <td>
           10
         </td>
         <td>
-          5
+          2
         </td>
         <td>
-          Block
-        </td>
-        <td>
-          &lt;nosymbol&gt;
-        </td>
-        <td style="background: #AEF1AE">
-          case (_1: sandbox.Foo, _2: sandbox.Foo)(sandbox.Foo, sandbox.Foo)((s: String)sandbox.Bar((a @ _)), (s: String)sandbox.Bar((b @ _))) =&gt; scala.this.Predef.augmentString(a).&lt;(b)
-        </td>
-      </tr><tr>
-        <td>
-          10
-        </td>
-        <td>
-          4
+          242
+          -
+          247
         </td>
         <td>
           Apply
@@ -172,23 +119,12 @@
           11
         </td>
         <td>
-          7
+          3
         </td>
         <td>
-          Block
-        </td>
-        <td>
-          &lt;nosymbol&gt;
-        </td>
-        <td style="background: #F0ADAD">
-          case (_1: sandbox.Foo, _2: sandbox.Foo)(sandbox.Foo, sandbox.Foo)(_, _) =&gt; false
-        </td>
-      </tr><tr>
-        <td>
-          11
-        </td>
-        <td>
-          6
+          267
+          -
+          272
         </td>
         <td>
           Literal
