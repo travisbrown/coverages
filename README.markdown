@@ -61,5 +61,6 @@ well. Here's what our code coverage tools have to say:
 * [Scoverage](https://travisbrown.github.io/coverages/examples/001/scoverage/)
 * [JaCoCo](https://travisbrown.github.io/coverages/examples/001/jacoco/)
 
-(Spoiler alert: they're both pretty useless.)
+Scoverage shows exactly which cases aren't being tested, but JaCoCo isn't very
+helpful here.
 
